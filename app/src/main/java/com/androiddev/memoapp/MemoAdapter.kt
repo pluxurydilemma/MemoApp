@@ -10,9 +10,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.androiddev.memoapp.Data.Memo
 import com.androiddev.memoapp.Fragments.MainFragment
 
-class MemoAdapter(var memoList: List<Memo>,
-                  var listener: MainFragment
-                   ) : RecyclerView.Adapter<MemoAdapter.MemoHolder>() {
+class MemoAdapter(
+    var memoList: MutableList<Memo>,
+    var listener: MainFragment,
+    notesFragment: MainFragment
+) : RecyclerView.Adapter<MemoAdapter.MemoHolder>() {
 
     inner class MemoHolder(itemView : View ) : RecyclerView.ViewHolder(itemView),View.OnClickListener
     {
